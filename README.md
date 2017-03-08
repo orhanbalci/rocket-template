@@ -13,7 +13,7 @@ This is a REST API project template that uses [Rocket](https://github.com/Sergio
      cargo install diesel_cli```
 - Run database migration from your project directory. First make sure you have a working database url in your .env file.
     ```disel migration run```
-- Run your rest api server
+- Ignite your diesel powered rocket api 
     ```cargo run```
 - Skeleton code is taken from [mgattozi](https://github.com/mgattozzi/mgattozzi)
 
