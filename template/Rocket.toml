@@ -1,6 +1,6 @@
 [dev]
-port = 4000
+port = {{DevelopmentPort}}
 [staging]
-port = 3000
+port = {{StagingPort}}
 [prod]
-port = 3000
+port = {{ProductionPort}}

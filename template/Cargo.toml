@@ -1,10 +1,10 @@
 [package]
-name = "mgattozzi"
+name = "{{PackageName}}"
 version = "1.0.0"
 authors = ["Michael Gattozzi <mgattozzi@gmail.com>"]
 
 [[bin]]
-name = "mgattozzi"
+name = "{{BinaryName}}"
 path = "src/bin/main.rs"
 
 [lib]

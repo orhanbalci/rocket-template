@@ -42,12 +42,7 @@ fn main() {
     rocket::ignite()
         .mount("/", routes![
             count,
-            count_update,
-            public,
-            keybase,
-            static_files,
-            index,
-            site
+            count_update
         ])
         .launch();
 }
@@ -73,33 +68,6 @@ impl<'a, 'r> FromRequest<'a, 'r> for DB {
             Err(e) => Failure((Status::InternalServerError, e)),
         }
     }
-}
-
-// Routes
-#[get("/static/<file..>")]
-fn static_files(file: PathBuf) -> Option<NamedFile>{
-     NamedFile::open(Path::new("src/client/static").join(file)).ok()
-}
-
-#[get("/public/<file..>")]
-fn public(file: PathBuf) -> Option<NamedFile>{
-     NamedFile::open(Path::new("src/client/public").join(file)).ok()
-}
-
-#[get("/keybase.txt")]
-fn keybase() -> Option<NamedFile> {
-    NamedFile::open("src/client/keybase.txt").ok()
-}
-
-#[get("/")]
-fn index() -> Option<NamedFile> {
-    NamedFile::open("src/client/index.html").ok()
-}
-
-#[get("/<path..>")]
-fn site(path: PathBuf) -> Option<NamedFile> {
-    let _ = path;
-    NamedFile::open("src/client/index.html").ok()
 }
 
 #[get("/count")]
