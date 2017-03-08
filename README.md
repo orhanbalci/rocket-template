@@ -1,5 +1,5 @@
 #Rocket-Template
-This is a REST API project template that uses [Rocket](https://github.com/SergioBenitez/Rocket) framework with [Diesel](https://github.com/diesel/diesel) ORM backed up with Postgresql database. You can generate project skeleton using  porteurbars.
+This is a REST API project template that uses [Rocket](https://github.com/SergioBenitez/Rocket) framework with [Diesel](https://github.com/diesel-rs/diesel) ORM backed up with Postgresql database. You can generate project skeleton using  porteurbars.
 
 - In order to create project you need to install [porteurbars](https://github.com/softprops/porteurbars) first.
 - Run 
@@ -15,5 +15,5 @@ This is a REST API project template that uses [Rocket](https://github.com/Sergio
     ```disel migration run```
 - Run your rest api server
     ```cargo run```
-- Skeleton code is taken from [mgattozi](https://github.com/mgattozzi/mgattozi)
+- Skeleton code is taken from [mgattozi](https://github.com/mgattozzi/mgattozzi)
 
